@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <title>Home - Products</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container text-center">
+        <h1>Overview:</h1>
+      </div>
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% products.forEach(function(product) {%>
+            <tr>
+              <th scope="row"><%= product._id %></th>
+              <td><%= product.name %></td>
+              <td><%= product.price %></td>
+              <td><%= product.rating %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <button type="button" class="btn btn-dark">
+          <a
+            style="
+              color: white;
+              text-decoration: none !important;
+              cursor: pointer;
+            "
+            href="/products/add"
+            >Add product</a
+          >
+        </button>
+        <button type="button" class="btn btn-dark">
+          <a
+            style="
+              color: white;
+              text-decoration: none !important;
+              cursor: pointer;
+            "
+            href="/products/search"
+            >Search product</a
+          >
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

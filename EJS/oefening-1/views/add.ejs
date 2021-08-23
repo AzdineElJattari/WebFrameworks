@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <title>Add - Products</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container text-center">
+        <h1>Add product:</h1>
+      </div>
+      <div>
+        <form method="POST" action="/products/add">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input name="name" type="text" class="form-control" id="name" />
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Price:</label>
+            <input name="price" type="text" class="form-control" id="price" />
+          </div>
+          <div class="mb-3">
+            <label for="rating" class="form-label">Rating:</label>
+            <input
+              name="rating"
+              type="text"
+              class="form-control"
+              id="rating"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Add product</button>
+        </form>
+      </div>
+      <div class="mt-5">
+        <button type="button" class="btn btn-dark">
+          <a
+            style="
+              color: white;
+              text-decoration: none !important;
+              cursor: pointer;
+            "
+            href="/products/home"
+            >Home (overview)</a
+          >
+        </button>
+        <button type="button" class="btn btn-dark">
+          <a
+            style="
+              color: white;
+              text-decoration: none !important;
+              cursor: pointer;
+            "
+            href="/products/search"
+            >Search product</a
+          >
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

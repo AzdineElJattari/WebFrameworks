@@ -1,0 +1,23 @@
+<div class='container'>
+  <h1>Search Product</h1>
+
+<form [formGroup]="productSearchForm" (ngSubmit)="onSubmit()">
+ <br />
+ <label>
+   Name:
+   <input type="text" formControlName="name">
+ </label>
+ <br />
+ <button type="submit" [disabled]="!productSearchForm.valid">Search</button>
+ <br />
+</form>
+
+<br /><br />
+ <h2> Result</h2>
+ <li *ngFor='let product of products'>
+   Name : {{ product.name }}<br />
+   Price : {{ product.price }}<br />
+   Rating : {{ product.rating }}<br />
+ </li>
+<br />
+</div>
