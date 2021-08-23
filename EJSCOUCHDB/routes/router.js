@@ -34,7 +34,7 @@ router.get("/api/search/movies", (req, res) => {
 
 //Zoeken naar films van een acteur MOVIES zitten in een array die zich bevindt in een andere array dus [[]]
 router.post("/api/search/movies", async (req, res) => {
-  axios.get(`${DB_URL}${DB_VIEWS}search-actor?key="${req.body.actor.toLowerCase()}"`) //Key meegegeven aan de view genaamd search-movie
+  axios.get(`${DB_URL}${DB_VIEWS}search-actor?key="${req.body.actor.toLowerCase()}"`) //Key meegegeven aan de view genaamd search-actor
     .then((response) => {
       let array = response.data.rows.map(x => x.value);
       let movies = array[0];

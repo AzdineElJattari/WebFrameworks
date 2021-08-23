@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3001;
 var path = require("path");
 
 mongoose
-  .connect("mongodb://localhost:27017/productsdb", { useNewUrlParser: true })
+  .connect("mongodb://localhost:27017/productsdb", { useNewUrlParser: true }) //Mongoose zal automatisch DB aanmaken indienen het NIET bestaat!
   .then(() => {
     console.log("Succesfully connected to DB! \n");
 
