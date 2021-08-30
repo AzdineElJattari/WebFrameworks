@@ -1,0 +1,9 @@
+[{
+    "name": "jef",
+    "leeftijd": 10,
+    "isStudent": true
+}, {
+    "name": "Katrien",
+    "leeftijd": 15,
+    "isStudent": false
+}]
