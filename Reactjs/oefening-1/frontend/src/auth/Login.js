@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Container, Col, Form, FormGroup, Label, Input } from 'reactstrap'
 import * as sha1 from 'js-sha1'
-  
+
 export default class Login extends Component {  
   
   constructor(props) {  
@@ -30,19 +30,22 @@ export default class Login extends Component {
   }
 
   render() {  
-    return (  
-       <Container className='App'>  
-        <h1 className='display-4'>Login</h1>
+    return ( 
+       <Container className='App' style={{paddingTop: "15%", paddingLeft: "28%"}}>
+           <h1 className='display-4'>
+             E - El Jattari Azdine
+           </h1>
+        <h1 className='display-4'>Welcome!</h1>
         <br/>
-        <Form className='form-group w-50'>  
+        <Form className='form-group w-25'>  
           <Col>  
-            <FormGroup row>  
-              <Label for='name'>Name</Label>  
+            <FormGroup row style={{marginBottom: 15}}>  
+              <Label for='name' style={{marginBottom: 5}}>Name</Label>  
                 <Input type='text' className='form-control' name='username' value={ this.state.username } 
                       onChange={ this.handleInputChange } placeholder='Enter username' />  
             </FormGroup>
-            <FormGroup row>  
-              <Label for='name'>Password</Label>  
+            <FormGroup row style={{marginBottom: 15}}>  
+              <Label for='name' style={{marginBottom: 5}}>Password</Label>  
                 <Input type='password' className='form-control' name='password' value={ this.state.password } 
                       onChange={ this.handleInputChange } placeholder='Enter password' />  
             </FormGroup> 

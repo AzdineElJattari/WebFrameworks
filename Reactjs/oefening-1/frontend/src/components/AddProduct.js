@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Container, Col, Form, FormGroup, Label, Input } from 'reactstrap'
+import { withRouter } from 'react-router-dom'
   
-export default class AddProduct extends Component {  
+class AddProduct extends Component {  
   
   constructor(props) {  
       super(props)
@@ -21,6 +22,7 @@ export default class AddProduct extends Component {
   }
     
   addProduct() {
+    console.log(this.state);
     axios.post('http://localhost:4000/products/add', this.state)
         .then(res => {
           //console.log(res)
@@ -69,4 +71,6 @@ export default class AddProduct extends Component {
       )
   }
 }
+
+export default withRouter(AddProduct);
 

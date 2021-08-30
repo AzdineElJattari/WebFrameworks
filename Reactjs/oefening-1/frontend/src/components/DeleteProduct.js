@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Container, Col, Form, FormGroup, Label, Input } from 'reactstrap'
+import { withRouter } from 'react-router-dom'
   
-export default class DeleteProduct extends Component {  
+class DeleteProduct extends Component {  
   
   constructor(props) {  
       super(props)
@@ -59,5 +60,7 @@ export default class DeleteProduct extends Component {
       )
   }
 }
+
+export default withRouter(DeleteProduct);
 
 

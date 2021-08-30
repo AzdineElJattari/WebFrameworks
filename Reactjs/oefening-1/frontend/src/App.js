@@ -7,7 +7,7 @@ import DeleteProduct from "./components/DeleteProduct";
 import Login from "./auth/Login" // Weghalen als auth niet nodig is
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 
-class App extends Component {
+export default class App extends Component {
 
   constructor(props) {  
     super(props)
@@ -76,5 +76,3 @@ class App extends Component {
     }
   }
 }
-
-export default App
