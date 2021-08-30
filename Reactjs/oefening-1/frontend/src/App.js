@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import ListProduct from './product/ListProduct'
-import AddProduct from './product/AddProduct'
-import EditProduct from './product/EditProduct'
-import SearchProduct from './product/SearchProduct.js'
-import DeleteProduct from './product/DeleteProduct'
-import Login from '../authentication/Login' // Weghalen als auth niet nodig is
+import AddProduct from "./components/AddProduct";
+import SearchProduct from "./components/SearchProduct";
+import EditProduct from "./components/EditProduct";
+import ListProduct from "./components/ListProduct";
+import DeleteProduct from "./components/DeleteProduct";
+import Login from "./auth/Login" // Weghalen als auth niet nodig is
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 
 class App extends Component {
