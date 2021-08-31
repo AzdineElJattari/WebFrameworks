@@ -15,7 +15,7 @@ mongoose
     useFindAndModify: false
   })
   .then(() => {
-    console.log(`Succesfully connected to MONGODB => ${db}!`);
+    console.log(`Succesfully connected to DB with name: ${db}!`);
 
     const app = express();
     app.use(express.json());
