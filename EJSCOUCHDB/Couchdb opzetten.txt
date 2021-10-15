@@ -1,0 +1,25 @@
+1. Naar http://localhost:5984/_utils gaan en inloggen met name: root en pw: root
+2. Daar nodige DB aanmaken
+3. Vervolgens in ExpressJS root folder Axios installeren met commando: npm i axios
+
+DIT MOET GETYPT WORDEN in de map functies met reduce etc.:
+
+Dit is bv. voor een acteur op te gaan zoeken die zich bevindt in een array en daarvan alle films op te halen:
+
+function (doc) {
+  if(doc.actors && doc.name) {
+    doc.actors.forEach((actor) => {
+      emit(actor.toLowerCase(), doc.name);
+    });
+  }
+}
+
+Dit is bv. voor alle acteurs op te halen voor een bepaalde film.
+
+function (doc) {
+  if(doc.name && doc.actors)
+  emit(doc.name.toLowerCase(), doc.actors);
+}
+
+De eerste parameter van emit() is de key bv. search-actor/?key="sam poppings" -> naam van de acteur. De key die je mee geeft in KLEINE LETTERS MEEGEVEN AANGEZIEN .TOLOWERCASE() WORDT GEBRUIKT!
+De tweede parameter van emit() is de value die je terug wil geven dus search-actor/?key="good times at the padrino" -> naam van de film.

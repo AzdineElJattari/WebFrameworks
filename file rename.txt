@@ -1,0 +1,1 @@
+Voor projects te renamen -> VSCode dicht doen en project naam aanpassen en project terug openen

@@ -1,0 +1,28 @@
+1. Open VSCode en maak een folder aan genaamd 'Backend'.
+
+2. Open een terminal in die folder en typ 'npm init -y' commando.
+
+3. Typ nu ook npm i express commando in de terminal.
+
+3. Maak een directory aan genaamd "server" in de 'backend' folder en maak in de "server" folder de app.js file aan en typ dit in de file: 
+
+
+const express = require("express");
+
+const PORT = process.env.PORT || 3001;
+
+const app = express();
+
+app.listen(PORT, () => {
+  console.log(`Server listening on ${PORT}`);
+});
+
+
+4. Ga naar package.json en typ dit in de object bracket van de "script" key:
+
+"scripts": {
+  "start": "node server/app.js"
+},
+
+
+5. In de backend folder nog mongoose downloaden met commando: "npm install mongoose"

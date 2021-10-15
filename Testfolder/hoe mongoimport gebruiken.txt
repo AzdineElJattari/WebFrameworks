@@ -1,0 +1,5 @@
+1. Neem de .json bestand en steek dit in de gewenste folder
+2. Zorg ervoor dat de database en collection waarin de data moet komen al bestaat
+3. Typ volgende commando in de terminal onderaan in vscode: 
+
+mongoimport --jsonArray --db *HIER KOMT NAAM DB* --collection *HIER KOMT NAAM COLLECTION* --file *HIER DE NAAM VAN DE JSON FILE*

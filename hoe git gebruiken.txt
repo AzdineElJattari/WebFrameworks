@@ -1,0 +1,15 @@
+1. Maak directory aan waarin examen terecht zal komen
+2. Open Git bash en navigeer naar de folder
+3. Maak repo aan op Github
+4. Volg de stappen op de website
+5. NIET VERGETEN .GITIGNORE TOE TE VOEGEN VOOR NODE_MODULES!!!
+
+BIJ MAKEN VAN REPO VOOR PROJECT ZIEN DAT 
+IN REACT EN ANGULAR PROJECTEN DE .git WORDEN VERWIJDERD MET COMMANDO: rm -rf .git
+
+ALS NODE_MODULES NIET WIL IGNORED WORDEN:
+
+OPEN GIT BASH EN NAVIGEER NAAR DE REPOSITORY
+TYP COMMANDO: git rm -r --cached .
+TYP COMMANDO: git add .
+TYP COMMANDO: git commit -m "message"

@@ -1,0 +1,5 @@
+1. Open VSCode en open de folder die staat op desktop Bv. Exam - El Jattari Azdine
+
+2. Open in VScode de terminal en typ commando: ng new *HIER KOMT NAAR VAN PROJECT IN KLEINE LETTERS* bv. frontend ALS 'ng new' niet werk probeer dan "npm run ng new *NAAM PROJECT FRONTEND*
+
+3. Navigeer naar de "app" directory in "src" directory en typ hier "npm run ng serve" commando normaal zou nu de frontend moeten opstarten op port 4200.

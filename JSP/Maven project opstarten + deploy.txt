@@ -1,0 +1,15 @@
+Maven project opstarten:
+
+1. Open VScode en doe CTRL + SHIFT + P
+
+2. Zoek naar 'Maven: Create Maven Project' en dan 'maven-archetype-webapp' aantikken en Kies nadien de hoogste versie die beschikbaar is
+
+3. Als alles klaar is van codeer gedeelte -> in terminal typen 'mvn clean package'
+
+4. Hierna 'Target' directory openen en zoeken naar .war bestand.
+
+5. Rechtermuisknop indrukken op .war bestand en kies optie 'Run on Tomcat Server'.
+
+6. Naar Tomcat servers section gaan in VSCode en rechtermuisklik doen op .war file en dan 'openen in browser'. 
+
+7. localhost:8080/*parentfoldernaam*/'HIER KOMT bv. INDEX.JSP'!

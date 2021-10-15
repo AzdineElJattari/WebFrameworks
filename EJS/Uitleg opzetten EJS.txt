@@ -1,0 +1,3 @@
+1. Alles is hetzelfde als bij het opzetten van een ExpressJS oefening -> Kijk in Angular folder voor meer uitleg over opzetten van Express oefening
+
+2. Bij app.js dus waar de app wordt opgestart etc. moet je EJS template gaan toevoegen en uiteraard ook installeren met commando: "npm i ejs"

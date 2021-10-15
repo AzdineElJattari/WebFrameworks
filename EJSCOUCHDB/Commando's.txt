@@ -1,0 +1,66 @@
+// make database
+curl -X PUT http://127.0.0.1:5984/my_database -u admin
+// get all dbs
+curl -X GET http://127.0.0.1:5984/_all_dbs -u admin
+// delete database
+curl -X DELETE http://127.0.0.1:5984/my_database -u admin
+
+// create new named document
+!!!!! In windows is het aangeraden om je quotes te escapen, -d '{\"key\":\"val\"}' !!!!!
+curl -X PUT http://127.0.0.1:5984/my_database/product1 -d'{ "name" : "product1" , "brand" :"brand1" , "price" : 100 }'
+// get document
+curl -X GET http://127.0.0.1:5984/my_database/product1
+// modify document with revision from previous command
+curl -X PUT http://127.0.0.1:5984/my_database/product1 -d'{ "_rev" : "<rev>", "name" : "product1" , "brand" :"brand1" , "price" : 200 }'
+// create unnamed document
+curl -X POST http://127.0.0.1:5984/my_database/ -H "Content-Type: application/json" -d'{ "name" : "product2" , "brand" :"brand2" , "price" : 100 }'
+// delete document
+curl -X DELETE http://127.0.0.1:5984/my_database/<id>?rev=<rev>
+// find data with view. Note the quotes!
+curl -X GET 'http://127.0.0.1:5984/my_database/_design/views/_view/byName?key="product1"'
+
+
+### !ALS JSON OBJECTS MOETEN WORDEN GEIMPORTEERD IN COUCHDB GEWOON DOEN VIA POSTMAN! ###
+
+1.  localhost:5984/movies/_bulk_docs dit is de url waar je een POST naar moet doen. UITERAARD DATABASE AANPASSEN INDIEN NODIG!
+2.  Authorization aantikken in Postman en Basic auth kiezen en daar root als user ingeven en pw is ook root
+
+Onderstaande object met een docs array is wat default nodig is om de documenten te gaan aanmaken. Alles binnenin docs array kan weg en aangepast worden naar jouw JSON objecten die moeten aangemaakt worden.
+
+
+{
+    "docs": [
+        {
+            "name": "Bad times at the El Royale",
+            "actors": [
+                "Jeff Bridges",
+                "Jon Hamm",
+                "Dakota Johnson"
+            ]
+        },
+        {
+            "name": "Batman and The Dark Knight Rises",
+            "actors": [
+                "Jeff Snow",
+                "Peter Honsen",
+                "Xiaole Xu"
+            ]
+        },
+        {
+            "name": "Star Wars Episode XXII",
+            "actors": [
+                "Pieter Van Hansen Doeck",
+                "Jim Peterson",
+                "Bill Cosby"
+            ]
+        },
+        {
+            "name": "Marvels: Spiderman VS Captain America",
+            "actors": [
+                "Sam Poppings",
+                "Albert Anderson",
+                "Mike Kentucky"
+            ]
+        }
+    ]
+}

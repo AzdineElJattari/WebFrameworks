@@ -1,0 +1,3 @@
+Open project in VScode en open terminal, 
+navigeer naar de root directory en vervolgens typen: 
+"npx create-react-app frontend*" typen.

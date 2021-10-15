@@ -1,0 +1,7 @@
+1. Download in de frontend folder volgende node package modules:
+
+1. npm i bootstrap & voeg bootstrap cdn toe aan index.js -> import 'bootstrap/dist/css/bootstrap.min.css';
+1.1 npm i reactstrap react react-dom
+2. npm i react-router-dom
+3. npm i js-sha1 -> ENKEL EN ALLEEN ALS ER AUTH WORDT GEVRAAGD!
+4. npm i axios voor HTTP operations uit te voeren!
